@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+class Solution {
+    public long repairCars(int[] ranks, int cars) {
+        Arrays.sort(ranks);
+        long left = 1, right = (long) ranks[0] * (long) cars * cars;
+        while (left < right) {
+            long mid = left + (right - left) / 2;
+            if (canRepairAll(ranks, cars, mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+    
+    private boolean canRepairAll(int[] ranks, int cars, long maxTime) {
+        long repaired = 0;
+        for (int rank : ranks) {
+            long maxCars = (long) Math.sqrt(maxTime / rank); 
+            repaired += maxCars;
+            if (repaired >= cars) return true; 
+        }
+        return false;
+    }
+}
