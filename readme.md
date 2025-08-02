@@ -14,15 +14,10 @@ This repository is dedicated to storing well-documented and optimized solutions 
 -   **Explanations**: Where applicable, solutions include comments or separate explanation files detailing the logic, time complexity, and space complexity.
 -   **Progress Tracking**: A way to track and showcase my problem-solving journey on LeetCode.
 
-## 💻 Technologies Used
-
-(You can update this section with the actual languages and tools you use)
 
 * **Primary Languages**:
-    * Python
     * Java
     * C++
-    * JavaScript
 * **Version Control**: Git / GitHub
 
 ## 📁 LeetCode Solutions Structure
